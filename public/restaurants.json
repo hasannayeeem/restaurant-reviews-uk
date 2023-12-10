@@ -1,0 +1,176 @@
+[
+  {
+    "id": 1,
+    "name": "Culinary Delights",
+    "cuisine": "Italian",
+    "location": "123 Main Street, Cityville",
+    "rating": 4.5,
+    "img": "https://etimg.etb2bimg.com/photo/75161189.cms",
+    "description": "Savor the richness of Italian cuisine at Culinary Delights. From mouth-watering pasta to heavenly desserts, our restaurant is a celebration of flavor and tradition.",
+    "reviews": [
+      {
+        "id": 101,
+        "user": "Foodie123",
+        "comment": "Great pasta and friendly service!",
+        "rating": 5
+      },
+      {
+        "id": 102,
+        "user": "Epicurean22",
+        "comment": "Amazing pizza but a bit crowded.",
+        "rating": 4
+      },
+      {
+        "id": 103,
+        "user": "TasteExplorer",
+        "comment": "Desserts are heavenly!",
+        "rating": 5
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Spice Junction",
+    "cuisine": "Indian",
+    "location": "456 Spice Lane, Flavor City",
+    "rating": 4.0,
+    "img": "https://media.timeout.com/images/106000654/1372/772/image.webp",
+    "description": "Experience the vibrant flavors of India at Spice Junction. Our menu boasts delicious curry dishes, spicy biryani, and freshly baked naan that will transport you to the streets of India.",
+    "reviews": [
+      {
+        "id": 201,
+        "user": "CurryLover",
+        "comment": "Delicious curry dishes!",
+        "rating": 4
+      },
+      {
+        "id": 202,
+        "user": "HeatSeeker",
+        "comment": "Spicy biryani is a must-try!",
+        "rating": 4.5
+      },
+      {
+        "id": 203,
+        "user": "NaanAficionado",
+        "comment": "Freshly baked naan, yum!",
+        "rating": 3.5
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Sushi Haven",
+    "cuisine": "Japanese",
+    "location": "789 Sushi Street, Seaside Town",
+    "rating": 4.7,
+    "img": "https://lamag.com/.image/c_limit%2Ccs_srgb%2Cq_auto:eco%2Cw_1050/MTk3NTU1NzY4NTU3NjQzNDU4/most-romantic-restaurants-los-angeles-valentines-day-harriets.webp",
+    "description": "Immerse yourself in the art of sushi at Sushi Haven. From the best sushi in town to creative rolls and fresh fish, every bite is a journey into Japanese culinary excellence.",
+    "reviews": [
+      {
+        "id": 301,
+        "user": "SushiFanatic",
+        "comment": "Best sushi in town!",
+        "rating": 5
+      },
+      {
+        "id": 302,
+        "user": "RollConnoisseur",
+        "comment": "Creative rolls and fresh fish.",
+        "rating": 4.8
+      },
+      {
+        "id": 303,
+        "user": "WasabiWizard",
+        "comment": "Wasabi packs a punch!",
+        "rating": 4.5
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Mediterranean Delights",
+    "cuisine": "Mediterranean",
+    "location": "555 Olive Grove, Coastal Village",
+    "rating": 4.2,
+    "img": "https://lamag.com/.image/t_share/MTk3NTU1NzY4NTU3NjQzNDU4/most-romantic-restaurants-los-angeles-valentines-day-harriets.jpg",
+    "description": "Journey to the Mediterranean with our delightful dishes at Mediterranean Delights. From heavenly hummus to fresh olives and sweet baklava, each bite is a taste of the Mediterranean sun.",
+    "reviews": [
+      {
+        "id": 401,
+        "user": "HummusLover",
+        "comment": "The hummus platter is divine!",
+        "rating": 4.5
+      },
+      {
+        "id": 402,
+        "user": "OliveAficionado",
+        "comment": "Fresh olives and tasty falafel.",
+        "rating": 4
+      },
+      {
+        "id": 403,
+        "user": "BaklavaFan",
+        "comment": "Desserts are a sweet delight!",
+        "rating": 4.2
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "name": "BBQ Bliss",
+    "cuisine": "Barbecue",
+    "location": "777 Smoky Lane, Grill City",
+    "rating": 4.8,
+    "img": "https://etimg.etb2bimg.com/photo/75161189.cms",
+    "description": "Satisfy your barbecue cravings at BBQ Bliss. From the best ribs in town to mouth-watering barbecue sauce, our grill master ensures every bite is a moment of bliss.",
+    "reviews": [
+      {
+        "id": 501,
+        "user": "GrillMaster",
+        "comment": "Best barbecue joint in town!",
+        "rating": 5
+      },
+      {
+        "id": 502,
+        "user": "RibConnoisseur",
+        "comment": "The ribs are fall-off-the-bone tender.",
+        "rating": 4.9
+      },
+      {
+        "id": 503,
+        "user": "SauceAficionado",
+        "comment": "The barbecue sauce is perfection!",
+        "rating": 4.8
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Cozy Cafe Corner",
+    "cuisine": "Café",
+    "location": "321 Java Lane, Bean Town",
+    "rating": 4.3,
+    "img": "https://media-cdn.tripadvisor.com/media/photo-s/1b/0b/07/6e/the-rooftop-project.jpg",
+    "description": "Unwind in the charm of Cozy Cafe Corner. Sip on aromatic coffees and indulge in delightful pastries. Our café is a haven for those seeking a cozy and warm atmosphere.",
+    "reviews": [
+      {
+        "id": 601,
+        "user": "CoffeeConnoisseur",
+        "comment": "The best cappuccino in town!",
+        "rating": 4.5
+      },
+      {
+        "id": 602,
+        "user": "PastryFan",
+        "comment": "Mouth-watering pastries, a must-try!",
+        "rating": 4.2
+      },
+      {
+        "id": 603,
+        "user": "ChillExplorer",
+        "comment": "A perfect spot to relax and unwind.",
+        "rating": 4.0
+      }
+    ]
+  }
+]
