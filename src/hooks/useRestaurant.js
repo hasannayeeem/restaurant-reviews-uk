@@ -5,12 +5,11 @@ const useRestaurant = ({restaurantId}) =>{
     const [resLoading, setResLoading] = useState(true)
     console.log(restaurantId);
     useEffect( () =>{
-        // fetch(`http://localhost:5000/api/v1/get-single-restaurant/${restaurantId}`)
-        fetch(`tests.json`)
+        fetch(`http://localhost:5000/api/v1/get-single-restaurant/${restaurantId}`)
+        // fetch(`tests.json`)
         .then(res => res.json())
         .then(data => {
-            console.log({data});
-            setRestaurant(data)
+            setRestaurant(data?.singleRestaurant)
             setResLoading(false)
         });   
     },[restaurant, restaurantId, resLoading, setRestaurant]);

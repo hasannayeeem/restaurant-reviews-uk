@@ -2,10 +2,10 @@
   {
     "id": 1,
     "name": "Culinary Delights",
+    "image": "https://etimg.etb2bimg.com/photo/75161189.cms",
     "cuisine": "Italian",
     "location": "123 Main Street, Cityville",
     "rating": 4.5,
-    "img": "https://etimg.etb2bimg.com/photo/75161189.cms",
     "description": "Savor the richness of Italian cuisine at Culinary Delights. From mouth-watering pasta to heavenly desserts, our restaurant is a celebration of flavor and tradition.",
     "reviews": [
       {
@@ -34,7 +34,7 @@
     "cuisine": "Indian",
     "location": "456 Spice Lane, Flavor City",
     "rating": 4.0,
-    "img": "https://media.timeout.com/images/106000654/1372/772/image.webp",
+    "image": "https://media.timeout.com/images/106000654/1372/772/image.webp",
     "description": "Experience the vibrant flavors of India at Spice Junction. Our menu boasts delicious curry dishes, spicy biryani, and freshly baked naan that will transport you to the streets of India.",
     "reviews": [
       {
@@ -63,7 +63,7 @@
     "cuisine": "Japanese",
     "location": "789 Sushi Street, Seaside Town",
     "rating": 4.7,
-    "img": "https://lamag.com/.image/c_limit%2Ccs_srgb%2Cq_auto:eco%2Cw_1050/MTk3NTU1NzY4NTU3NjQzNDU4/most-romantic-restaurants-los-angeles-valentines-day-harriets.webp",
+    "image": "https://lamag.com/.image/c_limit%2Ccs_srgb%2Cq_auto:eco%2Cw_1050/MTk3NTU1NzY4NTU3NjQzNDU4/most-romantic-restaurants-los-angeles-valentines-day-harriets.webp",
     "description": "Immerse yourself in the art of sushi at Sushi Haven. From the best sushi in town to creative rolls and fresh fish, every bite is a journey into Japanese culinary excellence.",
     "reviews": [
       {
@@ -92,7 +92,7 @@
     "cuisine": "Mediterranean",
     "location": "555 Olive Grove, Coastal Village",
     "rating": 4.2,
-    "img": "https://lamag.com/.image/t_share/MTk3NTU1NzY4NTU3NjQzNDU4/most-romantic-restaurants-los-angeles-valentines-day-harriets.jpg",
+    "image": "https://lamag.com/.image/t_share/MTk3NTU1NzY4NTU3NjQzNDU4/most-romantic-restaurants-los-angeles-valentines-day-harriets.jpg",
     "description": "Journey to the Mediterranean with our delightful dishes at Mediterranean Delights. From heavenly hummus to fresh olives and sweet baklava, each bite is a taste of the Mediterranean sun.",
     "reviews": [
       {
@@ -121,7 +121,7 @@
     "cuisine": "Barbecue",
     "location": "777 Smoky Lane, Grill City",
     "rating": 4.8,
-    "img": "https://etimg.etb2bimg.com/photo/75161189.cms",
+    "image": "https://etimg.etb2bimg.com/photo/75161189.cms",
     "description": "Satisfy your barbecue cravings at BBQ Bliss. From the best ribs in town to mouth-watering barbecue sauce, our grill master ensures every bite is a moment of bliss.",
     "reviews": [
       {
@@ -150,7 +150,7 @@
     "cuisine": "Café",
     "location": "321 Java Lane, Bean Town",
     "rating": 4.3,
-    "img": "https://media-cdn.tripadvisor.com/media/photo-s/1b/0b/07/6e/the-rooftop-project.jpg",
+    "image": "https://media-cdn.tripadvisor.com/media/photo-s/1b/0b/07/6e/the-rooftop-project.jpg",
     "description": "Unwind in the charm of Cozy Cafe Corner. Sip on aromatic coffees and indulge in delightful pastries. Our café is a haven for those seeking a cozy and warm atmosphere.",
     "reviews": [
       {
