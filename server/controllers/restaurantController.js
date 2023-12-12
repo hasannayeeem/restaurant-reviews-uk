@@ -32,7 +32,6 @@ const createRestaurant = asyncHandler(async (req, res) => {
 
   const getAllRestaurant = asyncHandler(async (req, res) => {
     const allRestaurant = await Restaurant.find({});
-  
     if (!allRestaurant) {
     } else {
       return res.status(200).json({

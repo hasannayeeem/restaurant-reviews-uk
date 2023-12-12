@@ -1,6 +1,5 @@
 import React from 'react'
 import Card from './Card'
-import CardsHeader from './CardsHeader'
 import useRestaurants from '../../../hooks/useRestaurants'
 
 const Cards = () => {
@@ -22,7 +21,7 @@ const Cards = () => {
 			</div>
 			<div className='flex justify-center items-center py-20'>
 				<div className='md:px-4 md:grid md:grid-cols-2 lg:grid-cols-3 gap-5 space-y-4 md:space-y-0'>
-					{restaurants.map(restaurant => (
+					{restaurants.slice(0, 6).map(restaurant => (
 						<Card restaurant={restaurant} key={restaurant._id}></Card>
 					))}
 				</div>

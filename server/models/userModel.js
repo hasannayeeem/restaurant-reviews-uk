@@ -53,6 +53,21 @@ const userSchema = new mongoose.Schema({
 		// required: true,
 		// minlength: 3,
 	},
+	ambiance: { 
+		type: String,
+		// required: true,
+		// minlength: 3,
+	},
+	dietry: { 
+		type: String,
+		// required: true,
+		// minlength: 3,
+	},
+	cuisines: { 
+		type: String,
+		// required: true,
+		// minlength: 3,
+	},
 	currentCountry: { 
 		type: String,
 		// required: true,
