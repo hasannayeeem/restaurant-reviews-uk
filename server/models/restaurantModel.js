@@ -26,22 +26,18 @@ const restaurantModel = new mongoose.Schema(
     },
     reviews: [
       {
-        id: {
-          type: mongoose.Schema.Types.ObjectId,
-          ref: "review",
-        },
-        comment: {
+        // id: {
+        //   type: mongoose.Schema.Types.ObjectId,
+        //   ref: "review",
+        // },
+        review: {
           type: String,
-          require: true,
         },
         rating: {
             type: Number,
           },
         userId: {
-          id: {
-            type: Number,
-            required: true,
-          }
+            type: String,
         },
       },
     ],

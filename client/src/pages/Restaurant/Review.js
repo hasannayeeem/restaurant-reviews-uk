@@ -8,10 +8,15 @@ import useReviews from "../../hooks/useReviews";
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/bundle';
+import useUser from "../../hooks/useUserData";
+import auth from "../../firebase.init";
+import { useAuthState } from "react-firebase-hooks/auth";
 
 const Reviews = () => {
     const restaurantId = useParams();
     const [reviews] = useReviews(restaurantId)
+    const [user] = useAuthState(auth)
+    const [userData] = useUser(user);
   return (
     <div>
       <div className="p-6 md:px-16">
@@ -20,7 +25,7 @@ const Reviews = () => {
           spaceBetween={30}
           freeMode={true}
           autoplay={{
-            delay: 200,
+            delay: 1000,
             disableOnInteraction: false,
           }}
           breakpoints={{
@@ -41,7 +46,7 @@ const Reviews = () => {
           className="mySwiper"
         >
           {reviews?.map((review) => {
-            const { picture, name, date, stars, comment, _id } = review;
+            const { picture, name, rating, review: comment, _id } = review;
             return (
               <SwiperSlide className="sm:m-10" key={_id}>
                 <div
@@ -50,14 +55,14 @@ const Reviews = () => {
                   <div className="flex justify-between p-4">
                     <div className="flex items-center space-x-4">
                       <div>
-                        <RiStarSFill
-                          src={picture}
+                        <img
+                          src={`https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/53f59ee3-60ce-4d32-8885-c6f05457259c/dfo4vi6-0ef1ce35-08f1-4303-906f-2fa9babf4b94.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzUzZjU5ZWUzLTYwY2UtNGQzMi04ODg1LWM2ZjA1NDU3MjU5Y1wvZGZvNHZpNi0wZWYxY2UzNS0wOGYxLTQzMDMtOTA2Zi0yZmE5YmFiZjRiOTQucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.Tie1K3Xy_0BUSmFKubXOSwuNjgdTcpvrXvKx5eoiFrA`}
                           alt=""
-                          className="object-cover w-12 h-12 rounded-full dark:bg-gray-500"
-                        ></RiStarSFill>
+                          className="object-cover w-12 h-12 rounded-full dark:bg-purple-200"
+                        ></img>
                       </div>
                       <div>
-                        <h4 className="font-bold">{name}</h4>
+                        <h4 className="font-bold">{user?.email === userData.email ? userData.name : 'ADil Ahmed'}</h4>
                       </div>
                     </div>
                     <div className="flex items-center space-x-2 dark:text-yellow-500">
@@ -68,11 +73,11 @@ const Reviews = () => {
                       >
                         <path d="M494,198.671a40.536,40.536,0,0,0-32.174-27.592L345.917,152.242,292.185,47.828a40.7,40.7,0,0,0-72.37,0L166.083,152.242,50.176,171.079a40.7,40.7,0,0,0-22.364,68.827l82.7,83.368-17.9,116.055a40.672,40.672,0,0,0,58.548,42.538L256,428.977l104.843,52.89a40.69,40.69,0,0,0,58.548-42.538l-17.9-116.055,82.7-83.368A40.538,40.538,0,0,0,494,198.671Zm-32.53,18.7L367.4,312.2l20.364,132.01a8.671,8.671,0,0,1-12.509,9.088L256,393.136,136.744,453.3a8.671,8.671,0,0,1-12.509-9.088L144.6,312.2,50.531,217.37a8.7,8.7,0,0,1,4.778-14.706L187.15,181.238,248.269,62.471a8.694,8.694,0,0,1,15.462,0L324.85,181.238l131.841,21.426A8.7,8.7,0,0,1,461.469,217.37Z"></path>
                       </svg>
-                      <span className="text-xl font-bold">{stars}</span>
+                      <span className="text-xl font-bold">{rating}</span>
                     </div>
                   </div>
                   <div className="p-4 space-y-2 text-sm dark:text-gray-400">
-                    {comment.slice(0, 90)}...{" "}
+                    {comment?.slice(0, 70)}...{" "}
                   </div>
                 </div>
               </SwiperSlide>

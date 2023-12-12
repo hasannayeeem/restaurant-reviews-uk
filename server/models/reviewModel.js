@@ -1,14 +1,17 @@
 const mongoose = require("mongoose");
 
 const reviewModel = new mongoose.Schema({
-  comment: {
+  review: {
     type: String,
-    require: true,
   },
   rating:{
       type: Number,
     },
   userId:{
+    type: String,
+    required: true,
+    },
+  restaurantId:{
       type: String,
     },
 });

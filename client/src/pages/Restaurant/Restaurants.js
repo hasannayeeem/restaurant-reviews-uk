@@ -9,9 +9,10 @@ const Restaurants = () => {
 	const [type, setType] = useState();
 	const [searchTerm, setSearchTerm] = useState();
 	const [filteredRestaurants, setFilteredRestaurants] = useState()
+	console.log({restaurants, filteredRestaurants});
 	const combinedRestaurants = filteredRestaurants ? filteredRestaurants : restaurants;
 	  useEffect(()=>{
-		setFilteredRestaurants(restaurants.filter((restaurant)=> restaurant[type].toLowerCase().includes(searchTerm.toLowerCase())))
+		filteredRestaurants &&  setFilteredRestaurants(restaurants.filter((restaurant)=> restaurant[type]?.toLowerCase().includes(searchTerm?.toLowerCase())))
 	  },[searchTerm, restaurants, type])
 	return (
 		<div>

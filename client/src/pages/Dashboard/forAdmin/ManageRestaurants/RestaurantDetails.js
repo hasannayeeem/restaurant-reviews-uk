@@ -54,7 +54,7 @@ const RestaurantDetails = () => {
                 Location: {location || "London"}
               </h1>
               <h1 className="text-sm font-semibold capitalize  my-1">
-                Rating: {rating || "random"}
+                Rating: {Number(rating).toFixed(1) || "random"}
               </h1>
               <h1 className="text-sm font-semibold capitalize  my-1">
                 Opening Hours: {"Everyday 10:30AM - 11:30 PM"}

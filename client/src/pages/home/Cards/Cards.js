@@ -4,6 +4,7 @@ import useRestaurants from '../../../hooks/useRestaurants'
 
 const Cards = () => {
 	const [restaurants] = useRestaurants([])
+	const trendingRestaurants = restaurants.sort((a, b) => parseFloat(b.rating) - parseFloat(a.rating));
 	return (
 		<div>
             <h2
@@ -21,7 +22,7 @@ const Cards = () => {
 			</div>
 			<div className='flex justify-center items-center py-20'>
 				<div className='md:px-4 md:grid md:grid-cols-2 lg:grid-cols-3 gap-5 space-y-4 md:space-y-0'>
-					{restaurants.slice(0, 6).map(restaurant => (
+					{trendingRestaurants.slice(0, 6).map(restaurant => (
 						<Card restaurant={restaurant} key={restaurant._id}></Card>
 					))}
 				</div>

@@ -8,7 +8,7 @@ const Card = ({ restaurant }) => {
         <div className="relative">
           <img className="w-full h-52" src={image} alt="Colors" />
           <p className="absolute top-0 right-0 bg-yellow-300 text-gray-800 font-semibold py-1 px-3 rounded-bl-lg">
-            {rating}
+            {Number(rating).toFixed(1)}
           </p>
           <p className="absolute bottom-2 left-2 bg-yellow-300 text-gray-800 font-semibold py-1 px-3 rounded-tr-lg rounded-bl-lg">
             {cuisine}
