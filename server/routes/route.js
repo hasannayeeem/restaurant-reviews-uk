@@ -53,7 +53,7 @@ router.post("/create-restaurant", createRestaurant);
 router.post("/submit-restaurant/:restaurant_id", submitRestaurant);
 router.post("/filter-restaurant-type", getRestaurantType);
 router.get("/get-all-restaurant", getAllRestaurant);
-router.get("/get-my-restaurants", getAllRestaurant);
+router.get("/get-my-restaurants", getRestauranstsByUserEmail);
 router.get("/get-single-restaurant/:id", getSingleRestaurant);
 router.delete("/delete-restaurant/:id", deleteRestaurant);
 

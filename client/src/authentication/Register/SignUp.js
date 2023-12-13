@@ -179,10 +179,6 @@ const SignUp = () => {
                                     <img className='w-7' src={google} alt="" />
                                     <p className='text-xl font-medium hover:text-gray-200 text-gray-300'>Continue With Google</p>
                                 </div>
-                                <div className="flex justify-center items-center cursor-pointer space-x-3 border duration-200 transition border-primary hover:border-secondary py-2">
-                                    <img className='w-7' src={facebook} alt="" />
-                                    <p className='text-xl font-medium hover:text-gray-200 text-gray-300'>Continue With Facebook</p>
-                                </div>
                             </div>
                             <div className="text-center text-white py-5">
                                 <p>Already have an account? <Link to='/login' className="underline text-secondary font-semibold">Log in here.</Link></p>

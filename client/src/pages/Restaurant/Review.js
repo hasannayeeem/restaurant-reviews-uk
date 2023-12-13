@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import React from "react";
 import { RiStarSFill } from "react-icons/ri";
 import { AiOutlineStar } from "react-icons/ai";
 import { Pagination, FreeMode, Autoplay } from 'swiper/modules';
@@ -17,6 +17,7 @@ const Reviews = () => {
     const [reviews] = useReviews(restaurantId)
     const [user] = useAuthState(auth)
     const [userData] = useUser(user);
+    if(!reviews?.length) return <h2>no review exist for ths restaurant</h2>
   return (
     <div>
       <div className="p-6 md:px-16">
@@ -46,7 +47,8 @@ const Reviews = () => {
           className="mySwiper"
         >
           {reviews?.map((review) => {
-            const { picture, name, rating, review: comment, _id } = review;
+            const { picture, name, rating, review: comment, _id } = review || {};
+            
             return (
               <SwiperSlide className="sm:m-10" key={_id}>
                 <div
@@ -62,7 +64,7 @@ const Reviews = () => {
                         ></img>
                       </div>
                       <div>
-                        <h4 className="font-bold">{user?.email === userData.email ? userData.name : 'ADil Ahmed'}</h4>
+                        <h4 className="font-bold">{name || 'Adil Ahmed'}</h4>
                       </div>
                     </div>
                     <div className="flex items-center space-x-2 dark:text-yellow-500">
@@ -85,7 +87,7 @@ const Reviews = () => {
           })}
         </Swiper>
       </div>
-      <div className=" flex justify-center ">
+      {/* <div className=" flex justify-center ">
         <Link to="/dashboard/addReview">
           <button
             className={`hover:bg-teal-800 bg-white text-teal-900 border border-teal-900 hover:text-white sm:px-7 px-5 transition py-1.5 sm:py-2.5 rounded-[3px] mt-5 uppercase flex justify-center items-center`}
@@ -94,7 +96,7 @@ const Reviews = () => {
             <AiOutlineStar className="ml-2 text-orange-400 font-bold text-lg" />
           </button>
         </Link>
-      </div>
+      </div> */}
     </div>
   );
 };

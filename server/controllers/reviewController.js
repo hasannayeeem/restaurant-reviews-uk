@@ -4,9 +4,10 @@ const Review = require("../models/reviewModel");
 const Restaurant = require("../models/restaurantModel");
 
 const createReviewRestaurant = asyncHandler(async (req, res) => {
-  const { review, rating, userId, restaurantId } = req.body;
+  const { review, rating, userId, restaurantId, name } = req.body;
   const buildRestaurant = new Review({
     review,
+    name,
     rating,
     userId,
     restaurantId,

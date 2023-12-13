@@ -33,6 +33,9 @@ const restaurantModel = new mongoose.Schema(
         review: {
           type: String,
         },
+        name: {
+          type: String,
+        },
         rating: {
             type: Number,
           },

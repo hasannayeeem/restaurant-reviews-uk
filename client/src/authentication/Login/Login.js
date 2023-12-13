@@ -233,12 +233,6 @@ const Login = () => {
 										Continue With Google
 									</p>
 								</div>
-								<div className='flex justify-center items-center cursor-pointer space-x-3 border duration-200 transition border-primary hover:border-secondary py-2'>
-									<img className='w-7' src={facebook} alt='' />
-									<p className='text-xl font-medium text-white'>
-										Continue With Facebook
-									</p>
-								</div>
 							</div>
 							<div className='text-center text-white py-5'>
 								<p>

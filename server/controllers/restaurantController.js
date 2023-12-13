@@ -1,6 +1,7 @@
 const mongoose = require("mongoose");
 const Restaurant = require("../models/restaurantModel");
 const asyncHandler = require("express-async-handler");
+const Review = require("../models/reviewModel");
 
 const createRestaurant = asyncHandler(async (req, res) => {
     const {
@@ -42,31 +43,11 @@ const createRestaurant = asyncHandler(async (req, res) => {
 
   const getRestauranstsByUserEmail = asyncHandler(async (req, res) => {
     const email = req.query.email;
+    // console.log(email, restaurants);
     const myRestaurants = await Restaurant.find({});
-    // let perticipatedRestaurants = [];
-
-    const restaurants = myRestaurants.filter((restaurants => (restaurants.users.filter((user => (user.userEmail === email)))).length && restaurants))
-    // for(let i=0;i<myRestaurants.length;i++){
-    //   const restaurant = myRestaurants[i];
-    //   console.log('EEEEEEEEEEEEE: '+restaurant)
-    //   for(let j=0;j<restaurant.users.length;j++){
-    //     const quser = restaurant.users[j];
-    //     if(quser.userEmail===email){
-    //       console.log('matched:::::::    '+email);
-
-    //       perticipatedRestaurants.push(restaurant);
-    //       console.log(perticipatedRestaurants);
-    //     }
-    //   }
-    // }
-    // console.log(perticipatedRestaurants);
-    // if (!perticipatedRestaurants) {
-    //   return
-    // } else {
-    //   return res.status(200).json({
-    //     perticipatedRestaurants,
-    //   });
-    // }
+    const restaurants = myRestaurants.filter((restaurants => (restaurants.reviews.filter((review => (review.userId === email)))).length && restaurants))
+    // const restaurants = await Review.find({userId: email});
+    // console.log(email, restaurants);
 
     if (!restaurants) {
       return
@@ -95,7 +76,7 @@ const createRestaurant = asyncHandler(async (req, res) => {
   
   const getSingleRestaurant = asyncHandler(async (req, res) => {
     const singleRestaurant = await Restaurant.findById(req.params.id);
-  
+  console.log(singleRestaurant, req.params.body);
     if (!singleRestaurant) {
     } else {
       return res.status(200).json({

@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 
 const useRestaurant = ({restaurantId}) =>{
-    const [restaurant, setRestaurant] = useState([]);
+    const [restaurant, setRestaurant] = useState();
     const [resLoading, setResLoading] = useState(true)
     console.log(restaurantId);
     useEffect( () =>{

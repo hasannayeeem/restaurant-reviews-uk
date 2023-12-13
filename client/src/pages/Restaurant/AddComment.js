@@ -11,11 +11,12 @@ function AddComment() {
   const [user] = useAuthState(auth);
   const [userData] = useUser(user)
   const {restaurantId} = useParams();
+  console.log(userData, 'dd');
   const sendReview = (e) => {
     e.preventDefault();
     if(!rating) return alert('Please Leave a rating')
     if(!review) return alert('Please Leave a review')
-    const reviewInstance = { review, rating, restaurantId, userId: userData._id };
+    const reviewInstance = { review, rating, restaurantId, userId: userData?._id, name: userData?.name };
     fetch(`http://localhost:5000/api/v1/create-review`, {
       method: "POST",
       headers: {
